@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+.jumbotron{
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/81/3e/b4/813eb42259b63efac2840a558131c3ad.jpg");
+  color: white !important;
+  -moz-box-shadow: 10px 10px 5px #888;
+-webkit-box-shadow: 10px 10px 5px #888;
+box-shadow: 10px 10px 5px #888;
+
+  text-shadow: -8px 0 25px black, 0 8px 25px black, 8px 0 25px black, 0 -8px 25px black;
+
+    background-position: 50% -360px;
+    padding: 115px 25px !important ;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  max-height: 1200px;
+  width: 60%;
+  margin: auto;
+}
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none;
+    }
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: lightgray;
+    z-index: 9999;
+    border: 0;
+    font-size: 20px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: black !important;
+
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+
+
+.btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+}
+
+
+.btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+.btn2{
+  margin-bottom: 0;
+  background-color: inherit;
+
+  border: 0px;
+
+  font-size: 20px;
+font-style: italic;
+  letter-spacing: 2px;
+  border-radius: 0;
+}
+
+.modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+}
+
+.modal-header, .modal-body {
+    padding: 40px 50px;
+}
+
+
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+}
+
+footer a {
+    color: #f5f5f5;
+}
+
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}
+.btn3{
+  padding: 20px;
+  background-color: inherit;
+
+  border: 3px solid black;
+  margin: 10px;
+
+  font-size: 20px;
+font-style: italic;
+  letter-spacing: 2px;
+  border-radius: 0;
+
+}
+
+.p1{
+  color: lightgray;
+}
+
+
+</style>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<div id="home" class="container-fluid">
+<div class="jumbotron text-center">
+  <h1>Samochody</h1>
+  <p><b>Przegląd ciekawych aut</b></p>
+  <form class="form-inline">
+   <div class="input-group">
+     <input type="email" class="form-control" size="50" placeholder="Adres e-mail" required>
+     <div class="input-group-btn">
+       <button type="button" class="btn btn-danger">Subskrybuj</button>
+     </div>
+   </div>
+ </form>
+</div>
+
+<div id="karuzela" class="container-fluid">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="http://www.v10.pl/archiwum/amerykany/aktualnosci/ford_mustang/getaway_classic_mustang/ford_mustang_1968_bullitt_gcm_07.jpg" class="car" width="2000" alt="Bullit">
+      <div class="carousel-caption">
+        <h3>Mustang 'Bullit' z 1963r.</h3>
+        <p>Klasyk, znany z filmu</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="http://starmoz.com/images/porsche-911-1980-12.jpg" width="1920" alt="Porsche">
+      <div class="carousel-caption">
+        <h3>Porsche 911 z 1980r.</h3>
+        <p>Flagowy model, produkowany od 1964r.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="http://car-from-uk.com/ebay/carphotos/full/ebay280411.jpg" width="1920" alt="Countach">
+      <div class="carousel-caption">
+        <h3>Lamborghini Countach z 1980r.</h3>
+        <p>2-drzwiowy klasyczny potwór</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="pull-left" href="#"><img src="http://galleryautomo.com/wp-content/uploads/2016/03/ford_mustang_logo_png_hd_car_wallpapers_1080p_.png" height="55px"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home">Home</a></li>
+  <li><a href="#karuzela">Karuzela</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#FAQ">FAQ</a></li>
+        <li><a href="#rejestracja"><button type="button" class="btn2" data-toggle="modal" data-target="#myModal">Rejestracja</button></a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="portfolio" class="container-fluid">
+  <div class="row text-center">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img style="width: 640px; height: 370px" src="http://www.landrover.co.uk/Images/L538_17_EXT_STU03_GRAPHITE_Device-Desktop_1600x900_295-233746_1216x684.jpg?v=6" alt="RR" >
+        <p><strong>Range Rover Evoque</strong></p>
+        <form target="_blank" action="https://pl.wikipedia.org/wiki/Range_Rover_Evoque" method="get">
+
+
+        <button  type="submit" class="btn">Strona producenta</button></form>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img style="width: 640px; height: 370px" src="https://images.cdn.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/bentley-continental-gt_2.jpg?itok=2CvM1ZCb" alt="B">
+        <p><strong>Bentley Continental GT</strong></p>
+        <form target="_blank" action="https://www.bentleymotors.com/en.html" method="get">
+
+
+        <button type="submit" class="btn">Strona producenta</button></form>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img style="width: 640px; height: 370px" src="http://s2.paultan.org/image/2013/12/Mercedes-Benz-C-Class-W205-0020.jpg" alt="W">
+        <p><strong>Mercedes W205</strong></p>
+        <form target="_blank" action="https://www.mercedes-amg.com/" method="get">
+
+
+        <button type="submit" class="btn">Strona producenta</button></form>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img style="width: 640px; height: 370px" src="https://i.ytimg.com/vi/sr2fmuxHXmw/maxresdefault.jpg" alt="M">
+        <p><strong>Ford Mustang</strong></p>
+        <form target="_blank" action="http://www.ford.com/" method="get">
+
+
+        <button type="submit" class="btn">Strona producenta</button></form>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img style="width: 640px; height: 370px" src="http://1.bp.blogspot.com/-f3IG3cant_U/VIL_G8qpRxI/AAAAAAAACGA/bZPfEoLh7p4/s1600/Ferrari-Enzo-4.jpg" alt="F">
+        <p><strong>Ferrari Enzo</strong></p>
+        <form target="_blank" action="http://www.ferrari.com/pl_pl/" method="get">
+
+
+        <button type="submit" class="btn">Strona producenta</button></form>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img style="width: 640px; height: 370px" src="https://www.lamborghini.com/en-en/sites/en-en/files/DAM/lamborghini/share%20img/aventador-coupe-facebook-og.jpg" alt="L">
+        <p><strong>Lamborghini Aventador</strong></p>
+        <form target="_blank" action="https://www.lamborghini.com/en-en/" method="get">
+
+
+        <button type="submit" class="btn">Strona producenta</button></form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <h4><span class="glyphicon glyphicon-user"></span> Zarejestruj Się</h4>
+     </div>
+     <div class="modal-body">
+       <form role="form">
+         <div class="form-group">
+           <label for="psw"> Nazwa Użytkownika</label>
+           <input type="text" class="form-control" id="psw" placeholder="np.Andrzej">
+         </div>
+         <div class="form-group">
+           <label for="usrname"> E-Mail</label>
+           <input type="text" class="form-control" id="usrname" placeholder="Andrzej@poczta.pl">
+         </div>
+         <button type="submit" class="btn btn-block">Wyślij
+           <span class="glyphicon glyphicon-ok"></span>
+         </button>
+       </form>
+     </div>
+     <div class="modal-footer">
+       <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+         <span class="glyphicon glyphicon-remove"></span> Anuluj
+       </button>
+       <a href="#">Pomoc</a>
+     </div>
+   </div>
+ </div>
+</div>
+
+
+
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="Wróć">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>All copyrights reserved</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+    // Initialize Tooltip
+    $('[data-toggle="tooltip"]').tooltip();
+})
+</script>
+
+
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
